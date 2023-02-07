@@ -1,0 +1,23 @@
+﻿@model AmidmedClinic.Models.MailModel
+@{
+    ViewBag.Title = "Index";
+}
+<h2>E-mail sistemi</h2>
+<fieldset>
+    @*<legend>
+        Em
+    </legend>*@
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>Kimdən: </p>
+        <p>@Html.TextBoxFor(m => m.From)</p>
+        <p>Kimə: </p>
+        <p>@Html.TextBoxFor(m => m.To)</p>
+        <p>Başlıq: </p>
+        <p>@Html.TextBoxFor(m => m.Subject)</p>
+        <p>Mesaj: </p>
+        <p>@Html.TextAreaFor(m => m.Body)</p>
+        <input asp-action="Index" type="submit" value="Göndər" />
+    }
+</fieldset> 

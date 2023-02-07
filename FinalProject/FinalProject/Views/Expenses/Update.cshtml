@@ -1,0 +1,44 @@
+﻿@model Expenses
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Xərc redaktə edin</h4>
+
+
+                <form method="post" class="forms-sample">
+
+                    <div class="form-group">
+                        <label asp-for="Quantity">Miqdarı</label>
+                        <input asp-for="Quantity" class="form-control">
+                        <span asp-validation-for="Quantity" class="alert-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Reason">Səbəbi</label>
+                        <input asp-for="Reason" class="form-control">
+                        <span asp-validation-for="Reason" class="alert-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date">Qeyd olunan tarix</label>
+                        <input asp-for="Date" class="form-control">
+                        <span asp-validation-for="Date" class="alert-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ByWho">Qeyd edən şəxs</label>
+                        <input asp-for="ByWho" class="form-control">
+                        <span asp-validation-for="ByWho" class="alert-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Qeyd edin</button>
+                    <a asp-action="Index" class="btn btn-light">Çıxın</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}
+
+

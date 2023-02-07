@@ -1,0 +1,48 @@
+﻿@model Vacancies
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Vakansiya yaradın</h4>
+
+                <form method="post" class="forms-sample">
+                    <div class="form-group">
+                        <label asp-for="Name">Adı</label>
+                        <input asp-for="Name" class="form-control">
+                        <span asp-validation-for="Name" class="alert-danger"></span>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="VacantPosition">Vakant Sahə</label>
+                        <input asp-for="VacantPosition" class="form-control">
+                        <span asp-validation-for="VacantPosition" class="alert-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Requirements">Tələblər</label>
+                        <input asp-for="Requirements" class="form-control">
+                        <span asp-validation-for="Requirements" class="alert-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Offers">Təkliflər</label>
+                        <input asp-for="Offers" class="form-control">
+                        <span asp-validation-for="Offers" class="alert-danger"></span>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary me-2">Qeyd et</button>
+                    <a asp-action="Index" class="btn btn-light">Çıx</a>
+                </form>
+        </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts{
+    <partial Name="_ValidationScriptsPartial" />
+
+}

@@ -1,0 +1,17 @@
+﻿@model Vacancies
+@{ ViewData["Title"] = "Detail"; }
+
+<div class="row">
+
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div>Adı: @Model.Name</div>
+                <h4>Vakant sahə : @Model.VacantPosition</h4>
+                <div>Tələblər: @Model.Requirements</div>
+                <div>Təkliflər: @Model.Offers</div>
+                <a class="btn btn-primary my-3" asp-action="Index">Geriyə</a>
+            </div>
+        </div>
+    </div>
+</div>
